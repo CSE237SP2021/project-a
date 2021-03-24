@@ -1,4 +1,4 @@
-package Washer;
+package Code;
 
 import java.util.Scanner;
 
@@ -21,38 +21,56 @@ public class User_Interface {
 		
 		selection currentSelection= selection.MainMenu;
 		Scanner in = new Scanner(System.in);
-		
+		System.out.println("Press Any Key to Begin");
+		String s = in.nextLine();
 		while(true) {
 			  
-	        String s = in.nextLine();
-	      
+	        
+	        
 	       switch(currentSelection) {
 	       
 	       case MainMenu:
-	    	   System.out.println("1. InventoryManagement");
+	    	   
+	    	   System.out.println("1. Inventory Management");
 	    	   System.out.println("2. Recipes");
-	    	   if(s=="InventoryManagement") {
+	    	   
+	    	   
+	    	   s = in.nextLine();
+	    	   
+	    	   if(s.equals("Inventory Management")) {
+	    		   
 	    		   currentSelection= selection.InventoryManagement;
+	    		 
 	    	   }
-	    	   if(s== "Recipes") {
+	    	   else if(s== "Recipes") {
 	    		   currentSelection = selection.Recipes;
+	    		
 	    	   }
+	    	   else {
+	    	   
+	    	   System.out.println("1. Inventory Management");
+	    	   System.out.println("2. Recipes");
+	    	   }
+	    	  
+	    	  
 	    	   break;
 	    	   
 	    	   
 	       case InventoryManagement:
 	    	   
-	    	   System.out.println("1. AddInventory");
-	    	   System.out.println("2. RemoveInventory");
-	    	   System.out.println("3. CheckInventory");
+	    	   System.out.println("1. Add Inventory");
+	    	   System.out.println("2. Remove Inventory");
+	    	   System.out.println("3. Check Inventory");
 	    	   
-	    	   if(s=="AddInventory") {
+	    	   s = in.nextLine();
+	    	   
+	    	   if(s.equals("Add Inventory")) {
 	    		   currentSelection= selection.AddInventory;
 	    	   }
-	    	   if(s== "RemoveInventory") {
+	    	   if(s.equals("Remove Inventory")) {
 	    		   currentSelection = selection.RemoveInventory;
 	    	   }
-	    	   if(s== "CheckInventory") {
+	    	   if(s.equals("Check Inventory")) {
 	    		   currentSelection = selection.CheckInventory;
 	    	   }
 	       
@@ -94,9 +112,7 @@ public class User_Interface {
 	       
 			
 			
-			
 		}
-		
 		
 		
 		

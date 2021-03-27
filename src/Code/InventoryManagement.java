@@ -21,34 +21,19 @@ public class InventoryManagement {
 		return items.size();
 	}
 	
-//	public String listFoods() {
-		//return Array.toString(list.toArray());
-//		}
 	
 	public void removeFood(InventoryManagement ingredientRemove) {
 		if (items.contains(ingredientRemove)== true) {
 			items.remove(ingredientRemove);
-
-			
-			//user input 
-//if user input matches something that is in the list of items 
-//		remove it 
-		// how to take account user input?
-		
-		
-	//	if (items.contains(b)== input) {
-//			items.remove(b);
 		}
 	}
+			
 
 
-//	   Import java.util.ArrayList
 // make inventory as an object that way we can access inventory given name 
 // functions for the class (add/remove)
 // inventory that runs for inventory to check inventory 
-//
-//	   Public static void main (String args []) {
-//	   List l = new ArrayList();
+
 //
 //	   String a = input.nextLine();
 //	   list.add(a);
@@ -56,15 +41,6 @@ public class InventoryManagement {
 //	   System.out.println(Arrays.toString(list.toArray()))
 //
 //	   }
-//
-//
-//	   Public static void main RemoveInventory (){
-//	   (Take in input of what needs to be removed)
-//
-//	   If list.contains(b) == input {
-//	    l.remove(a); 
-//	   }
-//
 //
 	
 

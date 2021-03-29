@@ -28,7 +28,7 @@ class recipeTesting {
 		assertEquals(InventoryTester.getInstance(), correctMockInventory);
 		
 	}
-	
+
 	@Test
 	//Unit test to test the getIngredientQuantity Method
 	void testItemQuantityRetrieval() {

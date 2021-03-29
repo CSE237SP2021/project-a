@@ -1,6 +1,9 @@
 package Code;
 
 import java.util.Scanner;
+import java.util.Set;
+
+import Code.InventoryManagement;
 
 public class User_Interface {
 	
@@ -13,7 +16,8 @@ public class User_Interface {
 		RemoveInventory,
 		CheckInventory,
 		Recipes,
-		ShowRecipe
+		ShowRecipe, 
+		Quit
 		
 	}
 	
@@ -24,8 +28,6 @@ public class User_Interface {
 		System.out.println("Press Any Key to Begin");
 		String s = in.nextLine();
 		while(true) {
-			  
-	        
 	        
 	       switch(currentSelection) {
 	       
@@ -33,25 +35,31 @@ public class User_Interface {
 	    	   
 	    	   System.out.println("1. Inventory Management");
 	    	   System.out.println("2. Recipes");
+	    	   System.out.println("3. Quit Out");
 	    	   
 	    	   
 	    	   s = in.nextLine();
 	    	   
-	    	   if(s.equals("Inventory Management")) {
+	    	   if(s.equals("1")) {
 	    		   
 	    		   currentSelection= selection.InventoryManagement;
 	    		 
 	    	   }
-	    	   else if(s== "Recipes") {
+	    	   else if(s.equals("2")) {
 	    		   currentSelection = selection.Recipes;
+	    		
+	    	   }
+	    	   else if(s.equals("3")) {
+	    		   currentSelection = selection.Quit;
 	    		
 	    	   }
 	    	   else {
 	    	   
 	    	   System.out.println("1. Inventory Management");
 	    	   System.out.println("2. Recipes");
+	    	   System.out.println("3. Quit Out");
 	    	   }
-	    	  
+	   
 	    	  
 	    	   break;
 	    	   
@@ -64,13 +72,13 @@ public class User_Interface {
 	    	   
 	    	   s = in.nextLine();
 	    	   
-	    	   if(s.equals("Add Inventory")) {
+	    	   if(s.equals("1")) {
 	    		   currentSelection= selection.AddInventory;
 	    	   }
-	    	   if(s.equals("Remove Inventory")) {
+	    	   if(s.equals("2")) {
 	    		   currentSelection = selection.RemoveInventory;
 	    	   }
-	    	   if(s.equals("Check Inventory")) {
+	    	   if(s.equals("3")) {
 	    		   currentSelection = selection.CheckInventory;
 	    	   }
 	       
@@ -78,12 +86,14 @@ public class User_Interface {
 	    	   
 	       case AddInventory:
 	    	   System.out.println("Enter name of ingredient");
-	    	   String ingredientAdd =in.next();
+	    	   String ingredientAdd =in.nextLine();
 	    	   
 	    	   System.out.println("Enter Quantity");
 	    	   double quantityAdd= in.nextDouble();
-	    	   
-	    	   
+	    	 
+	    	  
+	    	   InventoryManagement.getInstance().addFood(ingredientAdd, quantityAdd);
+	    	   currentSelection = selection.MainMenu; 
 	    	   break;
 	    	   
 	       case RemoveInventory:
@@ -92,6 +102,8 @@ public class User_Interface {
 	    	   
 	    	   System.out.println("Enter Quantity");
 	    	   double quantityRemove= in.nextDouble();
+	    	   InventoryManagement.getInstance().removeFood(ingredientRemove, quantityRemove);
+	    	   currentSelection = selection.MainMenu;
 	    	   
 	    	   
 	    	   break;
@@ -99,17 +111,23 @@ public class User_Interface {
 	    	   
 	       case CheckInventory:
 	    	   System.out.println("Here are the ingredients in your pantry");
-	    	   
+	    	   Set <String> ingredients = InventoryManagement.getInstance().getAllInventory();
+	    	   ingredients.stream().forEach(elem -> System.out.print(elem + " "));
+	    	   currentSelection = selection.MainMenu;
 	    	   break;
+	    	   
 	       case Recipes:
 	    	   System.out.println("1. ShowRecipes");
 	    	   if (s == "ShowRecipes") {
 	    		   currentSelection= selection.ShowRecipe;
 	    	   }
 	    	   break;
+	    	   
+	       case Quit:
+	    	   System.out.println("Thanks for checking your inventory!");
+	    	   return;
 	       }
-	       
-//	    	   
+	       	    	   
 			
 			
 		}
@@ -117,14 +135,14 @@ public class User_Interface {
 		
 		
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		User_Interface UI= new User_Interface();
 		UI.run();
 				
 	}
 }
 	
-	
+
 	
 	
 	

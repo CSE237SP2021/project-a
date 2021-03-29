@@ -108,5 +108,31 @@ class recipeTesting {
 	
 		assertEquals(InventoryTester.getInstance(), correctMockInventory);
 	}
+	
+	@Test
+	//Unit test to test adding ingredient with zero items
+	void testAddingZeroIngredient() {
+		InventoryManagement InventoryTester = new InventoryManagement();
+		InventoryTester.addFood("banana", 10.0);
+		InventoryTester.addFood("banana", 0.0);
+		
+		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
+		correctMockInventory.put("banana", (double) 10);
+		
+		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+	}
+	
+	@Test
+	//Unit test to test removing ingredient with zero items
+	void testRemovingZeroIngredient() {
+		InventoryManagement InventoryTester = new InventoryManagement();
+		InventoryTester.addFood("banana", 10.0);
+		InventoryTester.removeFood("banana", 0.0);
+		
+		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
+		correctMockInventory.put("banana", (double) 10);
+	
+		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+	}
 
 }

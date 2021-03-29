@@ -6,9 +6,13 @@ import java.util.Set;
 import Code.User_Interface;
 
 public class InventoryManagement {
-	private HashMap <String, Double> ingredients;
+	private HashMap <String, Double> ingredients = new HashMap <String, Double>();
+	private static InventoryManagement manager = new InventoryManagement();
 	public InventoryManagement () {
 		
+	}
+	public static InventoryManagement getInstance() {
+		return manager;
 	}
 	
 	public void addFood(String ingredientName, Double amount) {
@@ -52,6 +56,9 @@ public class InventoryManagement {
 			else {
 				ingredients.put(ingredientName, amount);
 			}
+		}
+		else {
+			System.out.println("Error: There is no ingredient with that name!");
 		}
 	}
 	public static void main(String[] args){

@@ -1,4 +1,7 @@
-# cse237-project
+Project RecipeMaker 
+An app that allows user keep track of food inventory like a fridge and suggest recipes based on the food inventory.
+
+
 * What user stories were completed this iteration?
     * As a potential user, I want to be able to decide which feature/initiate Inventory Management or Recipe Suggester of my refrigerator so I can decide what I want to make
     * As a potential user, I want to be able to add inventory into my fridge so I can keep an accurate inventory 

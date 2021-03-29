@@ -19,4 +19,5 @@
     * CD to where user interface project-a
     * Java c  User_Interface.java
     * Java User_interface.java
+    * When using user interface, type entire menu name instead of the number (ie "Inventory Management")
     * We are currently in the process of making this easier for the user to access rather than using multiple commands of Java. 

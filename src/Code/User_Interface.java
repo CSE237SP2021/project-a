@@ -117,7 +117,7 @@ public class User_Interface {
 		
 		
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		User_Interface UI= new User_Interface();
 		UI.run();
 				

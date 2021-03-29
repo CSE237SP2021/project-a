@@ -6,15 +6,18 @@ import java.util.Set;
 import Code.User_Interface;
 
 public class InventoryManagement {
+	//HashMap instance variable represents inventory in fridge
 	private HashMap <String, Double> ingredients = new HashMap <String, Double>();
 	private static InventoryManagement manager = new InventoryManagement();
 	public InventoryManagement () {
 		
 	}
+	//method returns instance of Inventory with HashMap instance variable
 	public static InventoryManagement getInstance() {
 		return manager;
 	}
 	
+	//method allows user to add to inventory
 	public void addFood(String ingredientName, Double amount) {
 		if (ingredients.containsKey(ingredientName)) {
 			Double amountinInventory = ingredients.get(ingredientName);
@@ -27,10 +30,12 @@ public class InventoryManagement {
 	}
 
 	
+	//method returns the total number of unique ingredients in your fridge
 	public String getNumberofFood() {
-		return "You havea total of" + ingredients.size() + "different ingredients in your fridge";
+		return "You have a total of" + ingredients.size() + "different ingredients in your fridge.";
 	}
 	
+	//method returns the quantify of a specific ingredient in fridge
 	public double getIngredientQuantity( String ingredientName) {
 		if (ingredients.containsKey(ingredientName)) {
 		return ingredients.get(ingredientName);
@@ -40,12 +45,13 @@ public class InventoryManagement {
 		}
 	}
 	
-	
+	//method returns the set of all ingredient names
 	public Set<String> getAllInventory() {
 		return ingredients.keySet();
 	}
 	 
 	
+	//method allows user to remove ingredients from the inventory
 	public void removeFood(String ingredientName, Double amount) {
 		if (ingredients.containsKey(ingredientName)) {
 			Double amountinFridge = ingredients.get(ingredientName);

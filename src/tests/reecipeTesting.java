@@ -8,8 +8,8 @@ import java.util.HashSet;
 import java.util.Set; 
 class reecipeTesting {
 
-	@Test
 	//Unit test to test the addFood method
+	@Test
 	void testAddingRecipeInventory() {
 		InventoryManagement InventoryTester = new InventoryManagement();
 		InventoryTester.addFood("banana", 10);
@@ -23,9 +23,8 @@ class reecipeTesting {
 		assertEquals(InventoryTester.ingredients, correctMockInventory);
 		
 	}
-	
-	@Test
 	//Unit test to test the getIngredientQuantity Method
+	@Test
 	void testItemQuantityRetrieval() {
 		InventoryManagement InventoryTester = new InventoryManagement();
 		InventoryTester.addFood("banana", 10);
@@ -41,8 +40,8 @@ class reecipeTesting {
 		
 	}
 	
-	@Test
 	//Unit test to test the remove food method 
+	@Test
 	void testRemovingRecipeInventory() {
 		InventoryManagement InventoryTester = new InventoryManagement();
 		InventoryTester.addFood("banana", 10);
@@ -59,8 +58,8 @@ class reecipeTesting {
 		
 	}
 	
-	@Test
 	//Unit test to test the getAllInventory method
+	@Test
 	void testGetAllInventory() {
 		InventoryManagement InventoryTester = new InventoryManagement();
 		InventoryTester.addFood("banana", 10);

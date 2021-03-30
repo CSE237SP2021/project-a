@@ -13,7 +13,7 @@
 
 * Is there anything that you implemented but doesn't currently work?
     * Currently our add and remove + quantity tracker  seem to be working along with the UI
-    * However, the UI still needs some work because we never thought about how the user would get out of our covid and navigate through our code between recipes and inventory management
+    * However, the UI still needs some work because we never thought about how the user would get out of a method and navigate through our code between recipes and inventory management
     * 
 * What commands are needed to compile and run your code from the command line (or better yet, provide a script that people can use to run your program!)
     * CD to where user interface project-a

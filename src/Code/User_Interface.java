@@ -148,7 +148,7 @@ public class User_Interface {
 
 
 		InventoryManagement.getInstance().addFood(ingredientAdd, quantityAdd);
-		
+		String s = in.nextLine();
 
 	}
 public void removefromInventory(Scanner in) {
@@ -158,6 +158,8 @@ public void removefromInventory(Scanner in) {
 	System.out.println("Enter Quantity");
 	double quantityRemove= in.nextDouble();
 	InventoryManagement.getInstance().removeFood(ingredientRemove, quantityRemove);
+	String s = in.nextLine();
+
 }
 public void checkInventory() {
 	System.out.println("Here are the ingredients in your pantry");

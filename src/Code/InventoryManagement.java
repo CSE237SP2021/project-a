@@ -5,7 +5,7 @@ import java.util.Set;
 
 import Code.User_Interface;
 
-//add Recipe class with instance variables for what included in recipe as well as directions for the recipe
+
 //add recipe objects to hashmap
 //add addRecipeIngredients method to inventoryManagement class to be able to add the ingredients of Recipe to the fridge
 

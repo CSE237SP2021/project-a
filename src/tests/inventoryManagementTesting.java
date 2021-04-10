@@ -23,7 +23,7 @@ class inventoryManagementTesting {
 		correctMockInventory.put("banana", (double) 10);
 		correctMockInventory.put("apple", (double) 10);
 		correctMockInventory.put("orange", (double) 10);
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryManagement.getInstance(), correctMockInventory);
 		
 	}
 	
@@ -57,7 +57,7 @@ class inventoryManagementTesting {
 		correctMockInventory.put("banana", (double) 5);
 		correctMockInventory.put("apple", (double) 10);
 	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryManagement.getInstance(), correctMockInventory);
 		
 	}
 	
@@ -88,7 +88,7 @@ class inventoryManagementTesting {
 		correctMockInventory.put("banana", (double) 10);
 		correctMockInventory.put("banana", (double) 10);
 	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryManagement.getInstance(), correctMockInventory);
 		
 	}
 	//Unit test to test removing same ingredient
@@ -102,7 +102,7 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 10);
 	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryManagement.getInstance(), correctMockInventory);
 	}
 	
 	//Unit test to test adding ingredient with zero items
@@ -115,7 +115,7 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 10);
 		
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryManagement.getInstance(), correctMockInventory);
 	}
 	
 	//Unit test to test removing ingredient with zero items
@@ -128,7 +128,7 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 10);
 	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryManagement.getInstance(), correctMockInventory);
 	}
 
 

@@ -1,5 +1,6 @@
 package Code;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -72,6 +73,14 @@ public class InventoryManagement {
 			System.out.println("Error: There is no ingredient with that name!");
 		}
 	}
+	public Collection<Double> printInventory() {
+		
+		return ingredients.values();
+	}
+	public String inventoryString() {
+		return ingredients.toString();
+	}
+	
 	public static void main(String[] args){
 		User_Interface UI= new User_Interface();
 		UI.run();

@@ -23,13 +23,12 @@ class inventoryManagementTesting {
 		correctMockInventory.put("banana", 10.0);
 		correctMockInventory.put("apple", 10.0);
 		correctMockInventory.put("orange", 10.0);
-		//System.out.println(InventoryTester.getInstance());
+		
 		System.out.println(InventoryTester.printInventory());
 		assertEquals(InventoryTester.printInventory().getClass(), correctMockInventory.values().getClass());
 		assertEquals(InventoryTester.printInventory().size(), correctMockInventory.values().size());
 		
-		//assertEquals( InventoryTester.printInventory(),correctMockInventory.values());
-		//assertTrue(InventoryTester.printInventory().equals(correctMockInventory.values()));
+		
 		assertTrue(InventoryTester.printInventory().size() == correctMockInventory.values().size());
 		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
 				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
@@ -64,10 +63,18 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 5);
 		correctMockInventory.put("apple", (double) 10);
-	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
 		
+		assertEquals(InventoryTester.printInventory().getClass(), correctMockInventory.values().getClass());
+		assertEquals(InventoryTester.printInventory().size(), correctMockInventory.values().size());
+		
+		
+		assertTrue(InventoryTester.printInventory().size() == correctMockInventory.values().size());
+		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
+				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
 	}
+		
+		
+	
 	
 	//Unit test to test the getAllInventory method
 	@Test
@@ -93,11 +100,18 @@ class inventoryManagementTesting {
 		InventoryTester.addFood("banana", 10.0);
 		
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
-		correctMockInventory.put("banana", (double) 10);
-		correctMockInventory.put("banana", (double) 10);
-	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		correctMockInventory.put("banana", (double) 20);
 		
+	
+		
+		
+		assertEquals(InventoryTester.printInventory().getClass(), correctMockInventory.values().getClass());
+		assertEquals(InventoryTester.printInventory().size(), correctMockInventory.values().size());
+		
+		
+		assertTrue(InventoryTester.printInventory().size() == correctMockInventory.values().size());
+		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
+				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
 	}
 	//Unit test to test removing same ingredient
 	@Test
@@ -110,7 +124,13 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 10);
 	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryTester.printInventory().getClass(), correctMockInventory.values().getClass());
+		assertEquals(InventoryTester.printInventory().size(), correctMockInventory.values().size());
+		
+		
+		assertTrue(InventoryTester.printInventory().size() == correctMockInventory.values().size());
+		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
+				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
 	}
 	
 	//Unit test to test adding ingredient with zero items
@@ -123,7 +143,13 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 10);
 		
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryTester.printInventory().getClass(), correctMockInventory.values().getClass());
+		assertEquals(InventoryTester.printInventory().size(), correctMockInventory.values().size());
+		
+		
+		assertTrue(InventoryTester.printInventory().size() == correctMockInventory.values().size());
+		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
+				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
 	}
 	
 	//Unit test to test removing ingredient with zero items
@@ -136,7 +162,13 @@ class inventoryManagementTesting {
 		HashMap <String, Double> correctMockInventory = new HashMap <String, Double> ();
 		correctMockInventory.put("banana", (double) 10);
 	
-		assertEquals(InventoryTester.getInstance(), correctMockInventory);
+		assertEquals(InventoryTester.printInventory().getClass(), correctMockInventory.values().getClass());
+		assertEquals(InventoryTester.printInventory().size(), correctMockInventory.values().size());
+		
+		
+		assertTrue(InventoryTester.printInventory().size() == correctMockInventory.values().size());
+		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
+				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
 	}
 
 

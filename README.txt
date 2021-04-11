@@ -1,4 +1,4 @@
-Project RecipeMaker 
+Project RecipeMaker Iteration #1
 An app that allows user keep track of food inventory like a fridge and suggest recipes based on the food inventory.
 
 

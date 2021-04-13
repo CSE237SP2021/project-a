@@ -2,22 +2,22 @@ package Code;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Set;
+import java.util.List;
 
 import Code.User_Interface;
-
-//add Recipe class with instance variables for what included in recipe as well as directions for the recipe
-//add recipe objects to hashmap
-//add addRecipeIngredients method to inventoryManagement class to be able to add the ingredients of Recipe to the fridge
 
 
 public class InventoryManagement {
 	
 	private HashMap <String, Double> ingredients = new HashMap <String, Double>();
+	private List <String> recipes = new LinkedList <String>();
 	private static InventoryManagement manager = new InventoryManagement();
 	public InventoryManagement () {
 		
 	}
+	
 
 	public static InventoryManagement getInstance() {
 		return manager;

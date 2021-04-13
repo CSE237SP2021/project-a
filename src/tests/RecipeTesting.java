@@ -27,7 +27,7 @@ public class RecipeTesting {
 		PBJingredients.add("jelly");
 		PBJingredients.add("bread");
 		
-		assertTrue(RecipeTester.getIngredients() == PBJingredients);
+		assertEquals(RecipeTester.getIngredients(), PBJingredients);
 	}
 
 	//Unit test to test getIngredients method

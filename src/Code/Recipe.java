@@ -15,15 +15,8 @@ public class Recipe {
     	this.recipeDuration = recipeDuration; 
     	this.isRecipeAdvanced = isRecipeAdvanced; 
     }
-    // made a Recipe object
-    //in inventory ma
-    //make a recipe stirng for instructions, recipe duration, is the recipe advanced
-    //peanut butter (string instructions, linkedin list, peanut butter, jelly, bread. 
-    //in inventory 
-    //write tests in Recipe branch & test if you can make recipe objects to write test
-    //tests in inventory management if you can add, recipe branch to see if getter/setters
     
-	public String getInstructions() {
+    public String getInstructions() {
 		return instructions;
 	}
 

@@ -27,7 +27,7 @@ public class RecipeTesting {
 		PBJingredients.add("jelly");
 		PBJingredients.add("bread");
 		
-		assertTrue(RecipeTester.ingredients == PBJingredients);
+		assertTrue(RecipeTester.getIngredients() == PBJingredients);
 	}
 
 	//Unit test to test getIngredients method
@@ -52,7 +52,7 @@ public class RecipeTesting {
 		int testDuration = 10;
 		RecipeTester.setRecipeDuration(testDuration);
 		
-		assertTrue(RecipeTester.recipeDuration == testDuration);
+		assertTrue(RecipeTester.getRecipeDuration() == testDuration);
 	}
 	
 	//Unit test to test getRecipeDuration method
@@ -73,7 +73,7 @@ public class RecipeTesting {
 		
 		String PBJinstructions = "Spread peanut butter on a slice of bread. Spread jelly on another slice of bread. Put the two slides together, with the pb and jelly sides facing each other.";
 		
-		assertEquals(RecipeTester.instructions, PBJinstructions);
+		assertEquals(RecipeTester.getInstructions(), PBJinstructions);
 	}
 	
 	//Unit test to test getInstructions method

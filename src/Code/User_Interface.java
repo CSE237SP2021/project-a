@@ -157,6 +157,7 @@ public void removefromInventory(Scanner in) {
 
 	System.out.println("Enter Quantity");
 	double quantityRemove= in.nextDouble();
+	
 	InventoryManagement.getInstance().removeFood(ingredientRemove, quantityRemove);
 	String s = in.nextLine();
 
@@ -164,7 +165,10 @@ public void removefromInventory(Scanner in) {
 public void checkInventory() {
 	System.out.println("Here are the ingredients in your pantry");
 	Set <String> ingredients = InventoryManagement.getInstance().getAllInventory();
-	ingredients.stream().forEach(elem -> System.out.print(elem + " "));
+	ingredients.stream().forEach(elem -> System.out.print(elem + " "+ InventoryManagement.getInstance().getIngredientQuantity(elem)+ '\n' ));
+	//ingredients.stream().forEach(elem -> System.out.println( InventoryManagement.getInstance().getIngredientQuantity(elem)));
+	System.out.println();
+	
 }
 
 	public static void main(String[] args){

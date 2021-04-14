@@ -11,7 +11,7 @@
     * A user should be able to sort the recipes by ingredients in the fridge
 
 * Is there anything that you implemented but doesn't currently work?
-    * The the recipe section of the UI is still under development. Right now, the user can access these tabs, but the recipe objects have not yet been created. 
+    * The the recipe section of the UI is still under development. Right now, the user can access these tabs, but the recipe objects have not yet been created. We have created the recipe tests first (based on feedback from Iteration #1)
 
 * What commands are needed to compile and run your code from the command line (or better yet, provide a script that people can use to run your program!)
     * ./run.sh 

@@ -3,20 +3,20 @@ package Code;
 import java.util.LinkedList;
 
 public class Recipe {
-	
+
 	private String instructions; 
 	private LinkedList<String> ingredients;
 	private int recipeDuration; 
-    private boolean isRecipeAdvanced; 
-    
-    public Recipe(String instructions, LinkedList<String> ingredients, int recipeDuration, boolean isRecipeAdvanced) {
-    	this.instructions = instructions; 
-    	this.ingredients = ingredients; 
-    	this.recipeDuration = recipeDuration; 
-    	this.isRecipeAdvanced = isRecipeAdvanced; 
-    }
-    
-    public String getInstructions() {
+	private boolean isRecipeAdvanced; 
+
+	public Recipe(String instructions, LinkedList<String> ingredients, int recipeDuration, boolean isRecipeAdvanced) {
+		this.instructions = instructions; 
+		this.ingredients = ingredients; 
+		this.recipeDuration = recipeDuration; 
+		this.isRecipeAdvanced = isRecipeAdvanced; 
+	}
+
+	public String getInstructions() {
 		return instructions;
 	}
 

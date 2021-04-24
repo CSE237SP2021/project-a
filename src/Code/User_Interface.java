@@ -17,6 +17,7 @@ public class User_Interface {
 		CheckInventory,
 		Recipes,
 		ShowRecipe, 
+		AddRecipe,
 		Quit
 
 	}
@@ -31,11 +32,9 @@ public class User_Interface {
 
 			switch(currentSelection){
 			case MainMenu:
-				//System.out.println("Here");
+
 				printMain();
 				currentSelection = selectionMain(in,currentSelection);
-
-
 				break;
 
 
@@ -66,15 +65,21 @@ public class User_Interface {
 				break;
 
 			case Recipes:
-				System.out.println("1. ShowRecipes");
-				if (s == "ShowRecipes") {
-					currentSelection= selection.ShowRecipe;
-				}
+
+				printRecipeMenu();
+				selectionRecipe(in,currentSelection);
+
 				break;
+			case ShowRecipe:
+
+
+			case AddRecipe:
 
 			case Quit:
 				System.out.println("Thanks for checking your inventory!");
-				return;
+				break;
+
+
 			}
 
 
@@ -84,11 +89,11 @@ public class User_Interface {
 
 
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	public void printMain() {
 
 		System.out.println("1. Inventory Management");
@@ -98,21 +103,16 @@ public class User_Interface {
 	}
 	public selection selectionMain(Scanner in, selection currentSelection) {
 		String s = in.nextLine();
-		
+
 		if(s.equals("1")) {
-
 			currentSelection= selection.InventoryManagement;
-
 		}
 		else if(s.equals("2")) {
 			currentSelection = selection.Recipes;
-
 		}
 		else if(s.equals("3")) {
 			currentSelection = selection.Quit;
-
 		}
-		
 		return currentSelection;
 	}
 
@@ -151,25 +151,41 @@ public class User_Interface {
 		String s = in.nextLine();
 
 	}
-public void removefromInventory(Scanner in) {
-	System.out.println("Enter name of ingredient");
-	String ingredientRemove =in.next();
+	public void removefromInventory(Scanner in) {
+		System.out.println("Enter name of ingredient");
+		String ingredientRemove =in.next();
 
-	System.out.println("Enter Quantity");
-	double quantityRemove= in.nextDouble();
-	
-	InventoryManagement.getInstance().removeFood(ingredientRemove, quantityRemove);
-	String s = in.nextLine();
+		System.out.println("Enter Quantity");
+		double quantityRemove= in.nextDouble();
 
-}
-public void checkInventory() {
-	System.out.println("Here are the ingredients in your pantry");
-	Set <String> ingredients = InventoryManagement.getInstance().getAllInventory();
-	ingredients.stream().forEach(elem -> System.out.print(elem + " "+ InventoryManagement.getInstance().getIngredientQuantity(elem)+ '\n' ));
-	//ingredients.stream().forEach(elem -> System.out.println( InventoryManagement.getInstance().getIngredientQuantity(elem)));
-	System.out.println();
-	
-}
+		InventoryManagement.getInstance().removeFood(ingredientRemove, quantityRemove);
+		String s = in.nextLine();
+
+	}
+	public void checkInventory() {
+		System.out.println("Here are the ingredients in your pantry");
+		Set <String> ingredients = InventoryManagement.getInstance().getAllInventory();
+		ingredients.stream().forEach(elem -> System.out.print(elem + " "+ InventoryManagement.getInstance().getIngredientQuantity(elem)+ '\n' ));
+		//ingredients.stream().forEach(elem -> System.out.println( InventoryManagement.getInstance().getIngredientQuantity(elem)));
+		System.out.println();
+
+	}
+	public void printRecipeMenu() {
+		System.out.println("1. Check Recipes");
+		System.out.println("2. Add Recipe");
+	}
+	public selection selectionRecipe(Scanner in, selection currentSelection) {
+		String s = in.nextLine();
+
+		if(s.equals("1")) {
+			currentSelection= selection.ShowRecipe;
+		}
+		if(s.equals("2")) {
+			currentSelection = selection.AddRecipe;
+		}
+		return currentSelection;
+
+	}
 
 	public static void main(String[] args){
 		User_Interface UI= new User_Interface();

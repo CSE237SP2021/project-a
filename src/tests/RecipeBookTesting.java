@@ -1,7 +1,6 @@
 package tests;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.LinkedList;
 
@@ -98,7 +97,6 @@ public class RecipeBookTesting {
 		Book.removeRecipe(PBJ);
 		Book.removeRecipe(ChickenSoup);
 		
-		Book.listRecipes();
 	
 		LinkedList<Recipe> testBook= new LinkedList<Recipe>();
 		
@@ -110,7 +108,7 @@ public class RecipeBookTesting {
 	
 	
 	@Test
-	void testSuggestingRecipe() {
+	public void testSuggestingRecipe() {
 		//creating inventory with ingredients for peanut butter and jelly
 		InventoryManagement InventoryTester = new InventoryManagement(); 
 		InventoryTester.addFood("peanut butter", 1.0);

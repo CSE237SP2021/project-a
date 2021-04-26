@@ -172,18 +172,6 @@ class inventoryManagementTesting {
 		assertTrue( InventoryTester.printInventory().containsAll(correctMockInventory.values()) 
 				&& correctMockInventory.values().containsAll(InventoryTester.printInventory()));
 	}
-	
-	@Test
-	void testSuggestingRecipe() {
-		InventoryManagement InventoryTester = new InventoryManagement(); 
-		InventoryTester.addFood("peanut butter", 1.0);
-		InventoryTester.addFood("jelly", 1.0);
-		InventoryTester.addFood("bread", 1.0);
-		LinkedList<Recipe> suggestedRecipe = InventoryTester.suggestRecipes(); 
-	    Recipe suggestion = suggestedRecipe.getFirst();
-	    assertEquals(suggestion.name(), "Peanut Butter and Jelly"); 
-		
-	}
 
 
 }

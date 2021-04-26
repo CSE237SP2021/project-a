@@ -19,22 +19,6 @@ public class InventoryManagement {
 		
 	}
 	
-	public LinkedList<Recipe> suggestRecipes() {
-		LinkedList<Recipe> suggestedRecipes = new LinkedList<Recipe>(); 
-		boolean addRecipe = true; 
-		for (Recipe suggestedRecipe : RecipeBook.values()) {
-			 for (String ingredientInRecipe: suggestedRecipe.getIngredients()) {
-				 if (manager.getIngredientQuantity(ingredientInRecipe) == 0) {
-					 addRecipe = false; 
-				 }
-			 }
-			 suggestedRecipes.add(suggestedRecipe); 
-		}
-		
-		return suggestedRecipes; 
-		
-	}
-	
 
 	public static InventoryManagement getInstance() {
 		return manager;

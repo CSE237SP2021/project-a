@@ -1,11 +1,13 @@
 package tests;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.LinkedList;
 
 import org.junit.Test;
 
+import Code.InventoryManagement;
 import Code.Recipe;
 import Code.RecipeBook;
 
@@ -105,8 +107,28 @@ public class RecipeBookTesting {
 		
 	}
 	
+	
 	@Test
-	public void testSortByIngredient() {
+	void testSuggestingRecipe() {
+		//creating inventory with ingredients for peanut butter and jelly
+		InventoryManagement InventoryTester = new InventoryManagement(); 
+		InventoryTester.addFood("peanut butter", 1.0);
+		InventoryTester.addFood("jelly", 1.0);
+		InventoryTester.addFood("bread", 1.0);
+		RecipeBook suggestedRecipeBook = new RecipeBook(); 
+		
+		//recipe book with only peanut butter and jelly as a recipe
+		RecipeBook trueBook = new RecipeBook(); 
+		LinkedList<String> PBIngredients = new LinkedList<String>(); 
+		PBIngredients.add("peanut butter");
+		PBIngredients.add("jelly");
+		PBIngredients.add("bread");
+		Recipe PBJ = new Recipe("Peanut Butter and Jelly", "put bread on", PBIngredients, 5, false); 
+		trueBook.addRecipe(PBJ);
+
+		//should
+	    assertEquals(suggestedRecipeBook.suggestRecipes(InventoryTester), trueBook.listRecipes()); 
 		
 	}
+
 }

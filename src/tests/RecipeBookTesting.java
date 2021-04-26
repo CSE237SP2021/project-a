@@ -96,6 +96,7 @@ public class RecipeBookTesting {
 		Book.removeRecipe(PBJ);
 		Book.removeRecipe(ChickenSoup);
 		
+		Book.listRecipes();
 	
 		LinkedList<Recipe> testBook= new LinkedList<Recipe>();
 		

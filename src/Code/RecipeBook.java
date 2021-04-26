@@ -36,7 +36,7 @@ public class RecipeBook {
 		return RecipeList;
 	}
 	
-	public void suggestRecipes(InventoryManagement manager) {
+	public RecipeBook suggestRecipes(InventoryManagement manager) {
 		RecipeBook suggestedRecipeBook = new RecipeBook();  
 		boolean addRecipe = true; 
 		for (Recipe suggestedRecipe : allRecipes) {
@@ -49,6 +49,7 @@ public class RecipeBook {
 		}
 		
 		suggestedRecipeBook.listRecipes(); 
+		return suggestedRecipeBook;
 		
 		
 	}

@@ -104,4 +104,9 @@ public class RecipeBookTesting {
 		assertEquals(testBook, Book.allRecipes);
 		
 	}
+	
+	@Test
+	public void testSortByIngredient() {
+		
+	}
 }

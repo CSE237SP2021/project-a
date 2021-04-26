@@ -19,12 +19,19 @@ public class InventoryManagement {
 		
 	}
 	
-	public void populateRecipeBook(String recipeLink, Recipe sample) {
-		RecipeBook.put(recipeLink, sample);
-	}
-	
-	public HashMap<String, Recipe> suggestTopRecipes() {
-		return null;
+	public LinkedList<Recipe> suggestRecipes() {
+		LinkedList<Recipe> suggestedRecipes = new LinkedList<Recipe>(); 
+		boolean addRecipe = true; 
+		for (Recipe suggestedRecipe : RecipeBook.values()) {
+			 for (String ingredientInRecipe: suggestedRecipe.getIngredients()) {
+				 if (manager.getIngredientQuantity(ingredientInRecipe) == 0) {
+					 addRecipe = false; 
+				 }
+			 }
+			 suggestedRecipes.add(suggestedRecipe); 
+		}
+		
+		return suggestedRecipes; 
 		
 	}
 	

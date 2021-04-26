@@ -37,7 +37,8 @@ public class RecipeBook {
 	}
 	
 	
-	public void  sortByIngredient(InventoryManagement Inventory,Recipe a) {
+	public LinkedList<Recipe>  sortByIngredients(InventoryManagement Inventory, Recipe a) {
+
 		
 	
 	}

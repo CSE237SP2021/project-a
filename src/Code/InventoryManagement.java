@@ -23,6 +23,11 @@ public class InventoryManagement {
 		RecipeBook.put(recipeLink, sample);
 	}
 	
+	public HashMap<String, Recipe> suggestTopRecipes() {
+		return null;
+		
+	}
+	
 
 	public static InventoryManagement getInstance() {
 		return manager;

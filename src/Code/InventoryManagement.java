@@ -14,7 +14,24 @@ public class InventoryManagement {
 	private HashMap <String, Double> ingredients = new HashMap <String, Double>();
 	private List <String> recipes = new LinkedList <String>();
 	private static InventoryManagement manager = new InventoryManagement();
+	public static HashMap <String, Recipe> RecipeBook = new HashMap <String, Recipe>(); 
 	public InventoryManagement () {
+		
+	}
+	
+	public LinkedList<Recipe> suggestRecipes() {
+		LinkedList<Recipe> suggestedRecipes = new LinkedList<Recipe>(); 
+		boolean addRecipe = true; 
+		for (Recipe suggestedRecipe : RecipeBook.values()) {
+			 for (String ingredientInRecipe: suggestedRecipe.getIngredients()) {
+				 if (manager.getIngredientQuantity(ingredientInRecipe) == 0) {
+					 addRecipe = false; 
+				 }
+			 }
+			 suggestedRecipes.add(suggestedRecipe); 
+		}
+		
+		return suggestedRecipes; 
 		
 	}
 	
@@ -86,6 +103,7 @@ public class InventoryManagement {
 		UI.run();
 				
 	}
+	
 	
 
 	

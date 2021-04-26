@@ -14,8 +14,13 @@ public class InventoryManagement {
 	private HashMap <String, Double> ingredients = new HashMap <String, Double>();
 	private List <String> recipes = new LinkedList <String>();
 	private static InventoryManagement manager = new InventoryManagement();
+	public static HashMap <String, Recipe> RecipeBook = new HashMap <String, Recipe>(); 
 	public InventoryManagement () {
 		
+	}
+	
+	public void populateRecipeBook(String recipeLink, Recipe sample) {
+		RecipeBook.put(recipeLink, sample);
 	}
 	
 
@@ -86,6 +91,7 @@ public class InventoryManagement {
 		UI.run();
 				
 	}
+	
 	
 
 	

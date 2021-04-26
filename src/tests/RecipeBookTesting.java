@@ -126,7 +126,7 @@ public class RecipeBookTesting {
 		Recipe PBJ = new Recipe("Peanut Butter and Jelly", "put bread on", PBIngredients, 5, false); 
 		trueBook.addRecipe(PBJ);
 
-		//should
+		//Both should list the PBJ Recipe
 	    assertEquals(suggestedRecipeBook.suggestRecipes(InventoryTester), trueBook.listRecipes()); 
 		
 	}

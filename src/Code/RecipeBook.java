@@ -36,11 +36,24 @@ public class RecipeBook {
 		return RecipeList;
 	}
 	
-	
-	public LinkedList<Recipe>  sortByIngredients(InventoryManagement Inventory, Recipe a) {
-
+	public void suggestRecipes(InventoryManagement manager) {
+		RecipeBook suggestedRecipeBook = new RecipeBook();  
+		boolean addRecipe = true; 
+		for (Recipe suggestedRecipe : allRecipes) {
+			 for (String ingredientInRecipe: suggestedRecipe.getIngredients()) {
+				 if (manager.getIngredientQuantity(ingredientInRecipe) == 0) {
+					 addRecipe = false; 
+				 }
+			 }
+			 suggestedRecipeBook.addRecipe(suggestedRecipe); 
+		}
 		
-	
+		suggestedRecipeBook.listRecipes(); 
+		
+		
 	}
+	
+	
+
 	
 }

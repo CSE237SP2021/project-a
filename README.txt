@@ -3,10 +3,10 @@
     * As a potential user, I am able to create my own recipe
     * As a potential user, I am able to see which ingredients I have for the listed recipes
     * As a potential user, I am able to view saved recipes from the UI
-    * Our group mainly focused on fixing the code from Iteration 2 and implementing comments from peer review
+    * Our group mainly focused on fixing the code from Iteration 2, implementing comments from peer review, and trying to implement the functionality to suggest recipes based on inventory
 
 * Is there anything that you implemented but doesn't currently work?
-    * Currently our testing for the recipeBook has been having compiling errors, which was caused when multiple people tried working on eclipse at the same time. 
+    * Currently, the functionality to suggest recipes is not working properly. The idea was to allow the user to be able tto recieve a list of suggested recipes based on the contents of their inventory, but there is a bug with this method that we couldn't quite figure out. So, in our RecipeBook Testing, the code is not passing the suggestRecipes test. The ability to suggest recipes was, admittedly, a little ambitious but we believe that we are actually close to being able to fully implement this functionality (we just ran out of time). 
     
    * Final Reflections from Iteration #3
    - We were very ambitious during our pitch and didn't anticipate some issues that arose and thought about our timeline from the project

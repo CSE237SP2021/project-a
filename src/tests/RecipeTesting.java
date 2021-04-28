@@ -19,7 +19,7 @@ public class RecipeTesting {
 		testIngredients.add("peanut butter");
 		testIngredients.add("jelly");
 		testIngredients.add("bread");
-		Recipe RecipeTester = new Recipe(null, null, 0, false);
+		Recipe RecipeTester = new Recipe(null,null, null, 0, false);
 		RecipeTester.setIngredients(testIngredients);
 		
 		LinkedList<String> PBJingredients = new LinkedList<String>();
@@ -37,7 +37,7 @@ public class RecipeTesting {
 		PBJingredients.add("peanut butter");
 		PBJingredients.add("jelly");
 		PBJingredients.add("bread");
-		Recipe RecipeTester = new Recipe(null, PBJingredients, 0, false);
+		Recipe RecipeTester = new Recipe(null,null, PBJingredients, 0, false);
 		
 		LinkedList<String> testIngredients = new LinkedList<String>();
 		testIngredients = RecipeTester.getIngredients();
@@ -48,7 +48,7 @@ public class RecipeTesting {
 	//Unit test to test setRecipeDuration method
 	@Test
 	void testSetRecipeDuration() {
-		Recipe RecipeTester = new Recipe(null, null, 0, false);
+		Recipe RecipeTester = new Recipe(null,null, null, 0, false);
 		int testDuration = 10;
 		RecipeTester.setRecipeDuration(testDuration);
 		
@@ -58,7 +58,7 @@ public class RecipeTesting {
 	//Unit test to test getRecipeDuration method
 	@Test
 	void testGetRecipeDuration() {
-		Recipe RecipeTester = new Recipe(null, null, 10, false);
+		Recipe RecipeTester = new Recipe(null,null, null, 10, false);
 		int testDuration = RecipeTester.getRecipeDuration();
 		
 		assertTrue(testDuration == 10);
@@ -67,7 +67,7 @@ public class RecipeTesting {
 	//Unit test to test setInstructions method
 	@Test
 	void testSetInstructions() {
-		Recipe RecipeTester = new Recipe(null, null, 0, false);
+		Recipe RecipeTester = new Recipe(null,null, null, 0, false);
 		String testInstructions = "Spread peanut butter on a slice of bread. Spread jelly on another slice of bread. Put the two slides together, with the pb and jelly sides facing each other.";
 		RecipeTester.setInstructions(testInstructions);
 		
@@ -80,7 +80,7 @@ public class RecipeTesting {
 	@Test
 	void testGetInstructions() {
 		String testInstructions = "Spread peanut butter on a slice of bread. Spread jelly on another slice of bread. Put the two slides together, with the pb and jelly sides facing each other.";
-		Recipe RecipeTester = new Recipe(testInstructions, null, 0, false);
+		Recipe RecipeTester = new Recipe(null,testInstructions, null, 0, false);
 		
 		String PBJinstructions = "Spread peanut butter on a slice of bread. Spread jelly on another slice of bread. Put the two slides together, with the pb and jelly sides facing each other.";
 		

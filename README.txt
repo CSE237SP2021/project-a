@@ -9,10 +9,10 @@
     * Currently our testing for the recipeBook has been having compiling errors, which was caused when multiple people tried working on eclipse at the same time. 
     
    * Final Reflections from Iteration #3
-   - We were very ambitious during our pitch and didn't anticipate some issues that arose and thought about our timeline formt he project
-   - If we were able to do it again, we would have met more regular to discuss specific dates and debug together on a Zoom. 
-   - It was extremely important for us to take in the feedback for each of the iterations as we saw drastic improvements from the first iteration to the third.
-   - Overall, we've learned a lot about project management and code cleanliness.
+   - We were very ambitious during our pitch and didn't anticipate some issues that arose and thought about our timeline from the project
+   - If we were able to do it again, we would have met more regularly to discuss specific dates and debug together on a Zoom. Working with others in a remote setting requires very careful and consistent communication, and we improved with each iteration but would definitely make more adjustments. 
+   - It was extremely important for us to take in the feedback for each of the iterations as we saw drastic improvements from the first iteration to the third. Even now, there's still feedback that we could use to continue improving our project, despite it being the final iteration. 
+   - Overall, we've learned a lot about project management and code cleanliness. Moreover, one of the most important things we have learned is how to efficiently navigate working on a computer science project with other collaborators in a way that is efficient and effective.
 
 * What commands are needed to compile and run your code from the command line (or better yet, provide a script that people can use to run your program!)
     * ./run.sh 

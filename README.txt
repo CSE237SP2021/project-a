@@ -11,6 +11,7 @@
    * Final Reflections from Iteration #3
    - We were very ambitious during our pitch and didn't anticipate some issues that arose and thought about our timeline formt he project
    - If we were able to do it again, we would have met more regular to discuss specific dates and debug together on a Zoom. 
+   - It was extremely important for us to take in the feedback for each of the iterations as we saw drastic improvements from the first iteration to the third.
    - Overall, we've learned a lot about project management and code cleanliness.
 
 * What commands are needed to compile and run your code from the command line (or better yet, provide a script that people can use to run your program!)
